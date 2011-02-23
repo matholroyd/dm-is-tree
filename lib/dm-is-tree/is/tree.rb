@@ -77,7 +77,7 @@ module DataMapper
         has_n_options = options[:order] ? { :order => Array(options[:order]) }.merge(assc_options) : assc_options
 
         belongs_to :parent, assc_options.merge(:required => false)
-        has n, :children, has_n_options
+        has n, :children, has_n_options.merge(:constraint => :destroy)
 
         class << self
           alias_method :root, :first_root # for people used to the ActiveRecord acts_as_tree
