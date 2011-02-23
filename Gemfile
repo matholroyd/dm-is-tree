@@ -13,7 +13,7 @@ group :runtime do # Runtime dependencies (as in the gemspec)
     gem 'extlib',        '~> 0.9.15', SOURCE => "#{DATAMAPPER}/extlib#{REPO_POSTFIX}", :require => nil
   else
     gem 'i18n',          '~> 0.5.0'
-    gem 'activesupport', '~> 3.0.4', :require => nil
+    gem 'activesupport', '~> 3.0.3', :require => nil
   end
 
   gem 'dm-core',         DM_VERSION, SOURCE => "#{DATAMAPPER}/dm-core#{REPO_POSTFIX}"
